@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>link extractor</title>
+</head>
+<style>
+
+.desk {
+  display: flex;
+  justify-content: center;
+}
+
+</style>
+<body>
+<div>
+    <div>
+        <h1>
+
+        </h1>
+    </div>
+    <div class="desk">
+        {% if link %}
+        <a href={{ link }} target="_blank" download="audio.mp3">
+        برای دانلود کلیک کنید
+        </a>
+        <br><br><br>
+        {% else %}
+        <p>پاسخی یافت نشد یا لینک اشتباه است. مجددا تلاش کنید.</p>
+        {% endif %}
+    </div>
+
+    <div class="desk">
+        <br><br><br>
+        <a href="/"><button>شروع مجدد</button></a>
+    </div>
+</div>
+</body>
+</html>
